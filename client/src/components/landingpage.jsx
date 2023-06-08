@@ -7,7 +7,7 @@ import regeneratorRuntime from "regenerator-runtime";
 // import {useSpeechSynthesis} from "react-speech-kit"
 // import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-const socket = io.connect("http://localhost:8000");
+const socket = io.connect("https://chatbot-backend-mv63.onrender.com");
 
 function Landingpage(props) {
   const handleclick = () => {
