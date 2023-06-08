@@ -155,7 +155,7 @@ function Landingpage(props) {
       const token = JSON.parse(localStorage.getItem("user_info")).token;
       axios
         .post(
-          "http://localhost:8000/api/msg/",
+          "https://chatbot-backend-mv63.onrender.com/api/msg/",
           { message: currentMessage },
           { headers: { "x-access-token": token } }
         )

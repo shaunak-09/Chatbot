@@ -46,7 +46,7 @@ const SignUp = (props) => {
           password: values.password,
           mobile: values.mobile
       }
-      axios.post("http://localhost:8000/api/signup/", {
+      axios.post("https://chatbot-backend-mv63.onrender.com/api/signup/", {
         username: values.name,
         email: values.email,
         password: values.password,
