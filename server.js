@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://6481b659d095bf137212a7f6--stalwart-sfogliatella-ab9450.netlify.app/",
+    origin: "https://chatbot-1x0si416t-shaunak-09.vercel.app/",
     methods: ["GET", "POST"],
   },
 });
