@@ -19,7 +19,7 @@ function App() {
   },[])
 
   return (
-    <div className='bg-gray-400 h-[100vh] w-[100vw] '>
+    <div className=' h-[100vh] w-[100vw] '>
       <ToastContainer />
     <Landingpage setloginsignup={toggleLoginModal} logstat={logstat} setLogstat={setLogstat}/> 
 

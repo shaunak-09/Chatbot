@@ -1,7 +1,12 @@
 #root {
   text-align: center;
 }
-
+body{
+  background-image: url("/src/assets/peakpx.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: black; */
+}
 .logo {
   height: 6em;
   padding: 1.5em;
