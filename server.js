@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chatbot-git-main-shaunak-09.vercel.app/",
+    origin: "https://chatbot-git-main-shaunak-09.vercel.app",
     methods: ["GET", "POST"],
   },
 });
