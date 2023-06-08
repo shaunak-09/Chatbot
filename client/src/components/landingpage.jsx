@@ -252,7 +252,7 @@ function Landingpage(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
 
-              <button onClick={enterchat} className="p-3 bg-gray-200 font-bold text-lg">Join</button>
+              <button onClick={enterchat} className="p-3 bg-gray-200 font-bold text-lg my-3">Join</button>
             </>
           )}
         </>
