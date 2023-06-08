@@ -183,25 +183,25 @@ function Landingpage(props) {
           </button>
           {Name ? (
             <>
-              <p className=" text-2xl font-bold">Hi {Name}</p>
-              <div className="msg-cont  bg-gray-600 w-[50%] p-2 h-[60vh] overflow-y-auto">
+              <p className=" text-2xl font-bold bg-black text-white p-3 my-4">Hi {Name}</p>
+              <div className="msg-cont  bg-gray-200 w-[50%] p-2 h-[60vh] overflow-y-auto">
                 {messageList.map((item, i) => {
                   return item.author == Name ? (
                     <div
                     key={i}
                       // id={Name === item.author ? "you" : "other"}
-                      className="msg my-3 text-left  float-right clear-both"
+                      className="msg-1 my-3 text-left  float-right clear-both"
                     >
                       <p className="text-sm">{item.author}</p>
-                      <p className="text-lg">{item.message}</p>
+                      <p className="text-lg font-semibold">{item.message}</p>
                     </div>
                   ) : (
                     <div
                       key={i}
-                      className="msg my-3 text-left float-left clear-both "
+                      className="msg-2 my-3 text-left float-left clear-both "
                     >
                       <p className=" text-sm">{item.author}</p>
-                      <p className="text-lg">{item.message}</p>
+                      <p className="text-lg font-semibold">{item.message}</p>
                     </div>
                   );
                 })}
