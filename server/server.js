@@ -1,4 +1,4 @@
-;
+require("dotenv").config();
 const { Server } = require("socket.io");
 // const io =require("socket.io")(server);
 const express=require("express");
@@ -38,7 +38,7 @@ io.on("connection",socket=>{
 })
 
 // Connect to MongoDB database
-mongoose.connect('mongodb+srv://shaunak:honda1805@cluster0.lz46p9j.mongodb.net/Chatbot?retryWrites=true&w=majority', 
+mongoose.connect(`${process.env.Database_Url}`, 
 { useNewUrlParser: true, 
   useUnifiedTopology: true,
 })
@@ -47,4 +47,4 @@ mongoose.connect('mongodb+srv://shaunak:honda1805@cluster0.lz46p9j.mongodb.net/C
  
   app.use("/api",routes)
 
-server.listen(port,()=>console.log(`Server running on port ${port}`))
+server.listen(process.env.Port,()=>console.log(`Server running on port ${process.env.Port}`))
