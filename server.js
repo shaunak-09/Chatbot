@@ -11,9 +11,9 @@ const routes=require("./routes")
 const port=process.env.Port||8000;
 
 app.use(bodyParser.json());
-app.use(cors({
-    origin:'*'
-}))
+// app.use(cors({
+//     origin:'*'
+// }))
 const server = http.createServer(app);
 
 const io = new Server(server, {
