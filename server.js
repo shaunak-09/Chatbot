@@ -8,6 +8,7 @@ const mongoose=require("mongoose");
 const cors=require("cors");
 const bodyParser=require("body-parser")
 const routes=require("./routes")
+const port=process.env.Port||8000;
 
 app.use(bodyParser.json());
 app.use(cors({
@@ -21,7 +22,9 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-
+// app.get("/",(req,res)=>{
+//   res.send("Hi");
+// })
 const users=[];
 io.on("connection",socket=>{
   console.log(`User Connected ${socket.id}`);
@@ -47,4 +50,4 @@ mongoose.connect(`${process.env.Database_Url}`,
  
   app.use("/api",routes)
 
-server.listen(process.env.Port,()=>console.log(`Server running on port ${process.env.Port}`))
+server.listen(port,()=>console.log(`Server running on port ${port}`))
