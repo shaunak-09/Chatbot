@@ -8,15 +8,18 @@ services:
       - data:/data/db
   
   backend:
-    image: backend:1.0
+    image: shaunak09/backend:1.0
     build: ./server
     ports:
       - "5000:5000"
     depends_on:
       - mongodb
+    environment:
+      - Database_Url=mongodb://data:27017/Chatbot
+      - Port=5000
 
   frontend:
-    mage: frontend:1.0
+    image: shaunak09/frontend:1.0
     build: ./client
     ports:
       - "3000:3000"
