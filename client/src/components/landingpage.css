@@ -1,0 +1,18 @@
+.msg-1{
+    background-color: rgb(23, 253, 2);
+    /* border-bottom: 3px rgb(7, 227, 7) solid; */
+    padding: 5px;
+    border-radius: 5px;
+    /* display: flex; */
+    overflow-wrap: break-word;
+  word-break: break-word;
+}
+.msg-2{
+  background-color: rgb(185, 184, 184);
+  /* border-bottom: 3px rgb(7, 227, 7) solid; */
+  padding: 5px;
+  border-radius: 5px;
+  /* display: flex; */
+  overflow-wrap: break-word;
+word-break: break-word;
+}

@@ -1,0 +1,154 @@
+.sgnmodalBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.392);
+    display: flex;
+    justify-content: center;
+    align-items: center;                                     
+    position: fixed;                                                                                                  
+    inset: 0;
+    z-index: 50;
+  }                                                                        
+.sgnmodalContainer {
+  border-radius: 12px;
+
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 80%;
+  overflow-y: scroll;
+  /* display: flex; */
+  width: 30%;
+  /* justify-content: center;*/
+  /* align-items: center;  */
+
+  background-color: rgb(55, 56, 57);
+}
+
+.sgnmodalclose {
+  /* display: flex;
+    justify-content: flex-end; */
+  color: white;
+  z-index: 10000;
+  background-color: transparent;
+  height: 10px;
+}
+
+.sgnmodalclose button {
+  position: absolute;
+  right: 1.5em;
+  top: 2em;
+  color: rgb(244, 145, 46);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all.2s;
+}
+
+.sgnmodalclose button:hover {
+  transform: scale(1.1);
+  color: rgb(245, 189, 94);
+}
+.sgnmodalContainer::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.sgnmodalContainer::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 0 10px 10px 0;
+  background-color: transparent;
+  width: 5px;
+}
+
+.sgnmodalContainer::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+.sgnmodalContainer h4 {
+  color: rgb(193, 190, 190);
+  text-align: center;
+}
+.sgnmodalContainer h4 span {
+  color: rgb(247, 137, 26);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all.2s;
+}
+.sgnmodalContainer h4 span:hover {
+  color: rgb(250, 153, 56);
+}
+.sgnbutton {
+  width: 43%;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin: 1em auto 1em auto;
+  color: rgb(252, 151, 57);
+  font-weight: 800;
+  border: 0;
+  outline: 3px solid rgb(252, 151, 57);
+  text-transform: uppercase;
+  font-size: 100%;
+  transition: all 0.6s;
+  border-radius: 3px;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    rgb(252, 151, 57) 50%
+  );
+  background-size: 230%;
+}
+#signupm {
+  margin: 0 auto;
+}
+#fp{
+  
+  cursor: pointer;
+  color: rgb(251, 129, 14);
+}
+@media only screen and (min-width: 400px) {
+  .sgnbutton:hover {
+    background-position: 100% center;
+    background-size: 100%;
+    outline: 3px ridge rgb(247, 135, 37);
+    color: rgb(36, 36, 36);
+    box-shadow: rgba(118, 116, 116, 0.882) 1px 2px 4px;
+    /* transform: scale(1.18); */
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .sgnmodalContainer {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .sgnmodalContainer {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sgnmodalContainer {
+    width: 65%;
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .sgnmodalContainer {
+    width: 80%;
+    height: 67%;
+  }
+  .sgnbutton {
+    color: rgb(9, 14, 63);
+    background-color: rgb(167, 241, 253);
+  }
+}
+@media only screen and (max-width: 370px) {
+  .sgnmodalContainer {
+    width: 90%;
+    height: 60%;
+  }
+}

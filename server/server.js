@@ -30,11 +30,11 @@ io.on("connection",socket=>{
   console.log(`User Connected ${socket.id}`);
     socket.on("new-user-joined",name=>{
         users[socket.id]=name;
-        console.log("user-joined"+name);
+        // console.log("user-joined"+name);
         socket.broadcast.emit("user-joined",name);
     })
     socket.on("send_msg",data=>{
-      console.log(data.message);
+      // console.log(data.message);
         socket.broadcast.emit("receive_msg",data)
     });
 

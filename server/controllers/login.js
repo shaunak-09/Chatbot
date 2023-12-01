@@ -13,7 +13,7 @@ const CryptoJS=require("crypto-js")
     const secretPass="Clipherschool"
     const user = await User.findOne({ email });
     // console.log(user);
-    if (!user) return res.status(400).send('Invalid username or password');
+    if (!user) return res.status(400).send('Invalid email or password');
     const bytes = CryptoJS.AES.decrypt(user.password, secretPass);
     // console.log(bytes);
     const data =JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
@@ -23,7 +23,7 @@ const CryptoJS=require("crypto-js")
       const token = jwt.sign({ id: user._id }, JWT_SECRET);
       res.json({ token,username:user.username,email});
     } else {
-      res.status(400).send('Invalid username or password');
+      res.status(400).send('Invalid email or password');
     }
   };
 
