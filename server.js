@@ -18,7 +18,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chatbot-git-main-shaunak-09.vercel.app",
+    origin: "https://chatbot-dusky-one.vercel.app",
     methods: ["GET", "POST"],
   },
 });
@@ -30,17 +30,18 @@ io.on("connection",socket=>{
   console.log(`User Connected ${socket.id}`);
     socket.on("new-user-joined",name=>{
         users[socket.id]=name;
-        console.log("user-joined"+name);
+        // console.log("user-joined"+name);
         socket.broadcast.emit("user-joined",name);
     })
     socket.on("send_msg",data=>{
-      console.log(data.message);
+      // console.log(data.message);
         socket.broadcast.emit("receive_msg",data)
     });
 
 })
 
 // Connect to MongoDB database
+console.log(process.env.Database_Url);
 mongoose.connect(`${process.env.Database_Url}`, 
 { useNewUrlParser: true, 
   useUnifiedTopology: true,
